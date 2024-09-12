@@ -1,0 +1,56 @@
+/* page.module.css */
+
+.moduleList li {
+  background-color: #fff;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.moduleList li:hover {
+  background-color: var(--col_lightestGrey);
+}
+
+.moduleHeading {
+  background-image: url('/images/circle-open.png');
+  background-position: top left;
+  background-repeat: no-repeat;
+  background-size: 25px;
+  color: var(--col_deepGrey);
+  padding-left: 30px;
+  padding-top: 1px;
+}
+
+.moduleList li .moduleContent {
+  color: var(--col_black);
+  font-weight: bold;
+  font-size: 0.90em;
+}
+
+.hidden {
+  display: none;
+}
+
+.slide_fade_enter {
+  max-height: 0;
+  opacity: 0;
+}
+
+.slide_fade_enter_active {
+  max-height: 1000px;
+  opacity: 1;
+  transition: max-height 1s ease, opacity 1s ease;
+}
+
+.slide_fade_exit {
+  max-height: 1000px;
+  opacity: 1;
+}
+
+.slide_fade_exit_active {
+  max-height: 0;
+  opacity: 0;
+  transition: max-height 1s ease, opacity 1s ease;
+}

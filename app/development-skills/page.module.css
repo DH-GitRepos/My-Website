@@ -1,0 +1,25 @@
+/* page.module.css */
+
+.skillsBox {
+  box-sizing: border-box;
+  background-color: var(--col_white);
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+
+.skillsBox h3 {
+  color: var(--col_blue);
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.skillsList {
+  list-style-type: none;
+  padding: 0;
+}
+
+.skillsList li {
+  color: var(--col_black);
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}

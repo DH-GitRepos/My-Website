@@ -1,0 +1,112 @@
+{
+    "page": 1,
+    "perPage": 30,
+    "totalItems": 8,
+    "totalPages": 1,
+    "items": [
+        {
+            "collectionId": "k5ov2uoev81844m",
+            "collectionName": "past_education_items",
+            "created": "2024-09-04 20:11:56.198Z",
+            "edu_chronology_order": 1,
+            "edu_date_range": "2019",
+            "edu_description": "Professional development course including colour spaces, colour workflow management (from graphics production to print), colour profiling and calibration for screens, printers and imaging devices using X-Rite products.",
+            "edu_establishment": "Antalis Academy",
+            "edu_result": "(Professional development)",
+            "edu_title": "Colour Management",
+            "id": "oodi3v79yvb39xy",
+            "updated": "2024-09-04 21:18:31.996Z"
+        },
+        {
+            "collectionId": "k5ov2uoev81844m",
+            "collectionName": "past_education_items",
+            "created": "2024-09-04 20:13:57.895Z",
+            "edu_chronology_order": 2,
+            "edu_date_range": "2018 - 2019",
+            "edu_description": "Included level 2 functional skills in English, Maths and I.T. in addition to the award modules. Award modules included: Communicate work-related information, Manage team performance, Lead and manage a team, Manage personal performance and development, Principles of team leading, Understanding business, Manage individuals performance, Procure products and services, Participate in a project, Employee rights and responsibilities.",
+            "edu_establishment": "PM Training",
+            "edu_result": "Grade: Pass",
+            "edu_title": "NVQ Level 2 Team Leading",
+            "id": "77ejfh9nzvo0n12",
+            "updated": "2024-09-04 21:15:59.955Z"
+        },
+        {
+            "collectionId": "k5ov2uoev81844m",
+            "collectionName": "past_education_items",
+            "created": "2024-09-04 20:14:33.292Z",
+            "edu_chronology_order": 3,
+            "edu_date_range": "2013",
+            "edu_description": "A professional development course run by a partner of the local authority. Teaching how to setup and run a small business. Including business plans, financial planning, formation, accounts, and marketing.",
+            "edu_establishment": "Business Enterprise Support",
+            "edu_result": "(Professional developement)",
+            "edu_title": "Small Business Management",
+            "id": "zao2waesxbb03e2",
+            "updated": "2024-09-04 21:10:48.849Z"
+        },
+        {
+            "collectionId": "k5ov2uoev81844m",
+            "collectionName": "past_education_items",
+            "created": "2024-09-04 20:16:58.013Z",
+            "edu_chronology_order": 4,
+            "edu_date_range": "2008 - 2010",
+            "edu_description": "Modules included visual studies, creativity and social context, investigation reflection and expression, professional and contectual studies, introduction to specialist pathway, exploring specialist pathway.  Entered the D&AD design awards competition, and completed a professional summer placement during this course.",
+            "edu_establishment": "Staffordshire University",
+            "edu_result": "Grade: CertHE",
+            "edu_title": "FdA Graphics and Digital Design",
+            "id": "818fep7wo32jvsd",
+            "updated": "2024-09-04 21:08:34.352Z"
+        },
+        {
+            "collectionId": "k5ov2uoev81844m",
+            "collectionName": "past_education_items",
+            "created": "2024-09-04 20:18:04.647Z",
+            "edu_chronology_order": 5,
+            "edu_date_range": "2004 - 2005",
+            "edu_description": "Included web fundamentals, network fundamentals, web authoring fundamentals (HTML, CSS), web languages (JavaScript, Perl) and project management. ",
+            "edu_establishment": "Scheidegger Training",
+            "edu_result": "Grade: Pass",
+            "edu_title": "Master CIW Website Design Manager",
+            "id": "www4krceqk3axxe",
+            "updated": "2024-09-04 21:01:26.052Z"
+        },
+        {
+            "collectionId": "k5ov2uoev81844m",
+            "collectionName": "past_education_items",
+            "created": "2024-09-04 20:18:44.592Z",
+            "edu_chronology_order": 6,
+            "edu_date_range": "2001",
+            "edu_description": "Web design course covering HTML, JavaScript, CSS, Macromedia Flash, Fireworks and Dreamweaver, Microsoft FrontPage.",
+            "edu_establishment": "Renegades Training",
+            "edu_result": "Grade: Distinction",
+            "edu_title": "Web Skills",
+            "id": "plt5jza6yl41yrx",
+            "updated": "2024-09-04 20:32:04.406Z"
+        },
+        {
+            "collectionId": "k5ov2uoev81844m",
+            "collectionName": "past_education_items",
+            "created": "2024-09-04 20:19:16.619Z",
+            "edu_chronology_order": 7,
+            "edu_date_range": "1995 - 1997",
+            "edu_description": "College IT course, included a variety of IT topics including MS-DOS 6.2, HTML 2, Turbo Assembler 5.3, Turbo Pascal 7, Visual Basic 4. ",
+            "edu_establishment": "Burton College",
+            "edu_result": "Grade: Merit",
+            "edu_title": "BTEC National Diploma Information Technology",
+            "id": "kdx0vwwee77ggyo",
+            "updated": "2024-09-04 20:30:40.127Z"
+        },
+        {
+            "collectionId": "k5ov2uoev81844m",
+            "collectionName": "past_education_items",
+            "created": "2024-09-04 20:20:21.751Z",
+            "edu_chronology_order": 8,
+            "edu_date_range": "1991 - 1994",
+            "edu_description": "High school GCSE's, including Maths (B), English (C), Science Double Award (C, C).",
+            "edu_establishment": "Torc High School",
+            "edu_result": "Passed",
+            "edu_title": "9 GCSE's inlcuding Maths, English and Science.",
+            "id": "n7lfg2ejxacwx0h",
+            "updated": "2024-09-04 20:25:28.827Z"
+        }
+    ]
+}
