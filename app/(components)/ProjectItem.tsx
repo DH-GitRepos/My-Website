@@ -4,6 +4,12 @@ import ContentImg from '../(components)/ContentImg';
 import Link from 'next/link';
 import DOMPurify from 'dompurify';
 
+// Configure DOMPurify to allow links
+const domPurifyConfig = {
+  ALLOWED_TAGS: ['a', 'Link', 'b', 'i', 'em', 'strong', 'p', 'div', 'span', 'ul', 'ol', 'li', 'br', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6'],
+  ALLOWED_ATTR: ['href', 'target', 'rel', 'class', 'id', 'style']
+};
+
 interface ProjectDataItem {
   client_name: string;
   collectionId: string;
@@ -70,7 +76,7 @@ const ProjectItem: React.FC<CallToActionProps> = ({ project }) => {
             {/* this section receives html content from the data source, set as innerHTML and sanitise */}
             <div
               dangerouslySetInnerHTML={{
-                __html: DOMPurify.sanitize(project.project_description),
+                __html: DOMPurify.sanitize(project.project_description, domPurifyConfig),
               }}
             />
 
