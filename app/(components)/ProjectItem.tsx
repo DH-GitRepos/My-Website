@@ -6,7 +6,7 @@ import DOMPurify from 'dompurify';
 
 // Configure DOMPurify to allow links
 const domPurifyConfig = {
-  ALLOWED_TAGS: ['a', 'Link', 'b', 'i', 'em', 'strong', 'p', 'div', 'span', 'ul', 'ol', 'li', 'br', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6'],
+  ALLOWED_TAGS: ['a', 'b', 'i', 'em', 'strong', 'p', 'div', 'span', 'ul', 'ol', 'li', 'br', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6'],
   ALLOWED_ATTR: ['href', 'target', 'rel', 'class', 'id', 'style']
 };
 

@@ -19,8 +19,8 @@ export default function LayoutFooter() {
           <article className="footerNav grow box-border w-1/3">
             <Link href="/">
                 <picture id="header-logo" className="h-[60-px] py-[10px]">
-                  <source media="(max-height: 45px)" srcSet="/images/Logo-v3b.svg" type="image/svg+xml" />
-                  <img src="/images/Logo-v3b.png" alt="Site Logo" className="h-[40px]" />
+                  <source media="(max-height: 45px)" srcSet="/images/Logo-D.webp" type="image/webp" />
+                  <img src="/images/Logo-D.webp" alt="Site Logo" className="h-[40px]" />
                 </picture>
             </Link>
 
@@ -64,14 +64,14 @@ export default function LayoutFooter() {
             <ul>
               <li className="w-[100%] h-[50px] pb-[10px] cursor-pointer group">
                 <Link href="https://www.linkedin.com/in/darren-halpin/" target="_blank" rel="noopener noreferrer">
-                  <div className="w-[100%] h-[40px] bg-[url('/images/LI-Logo-grey.png')] hover:bg-[url('/images/LI-Logo-blue.png')] bg-contain bg-no-repeat">
+                  <div className="w-[100%] h-[40px] bg-[url('/images/social_icons/LI-Logo-LG.png')] hover:bg-[url('/images/social_icons/LI-Logo-B.png')] bg-contain bg-no-repeat">
                     <p className="w-[100%] pl-[50px] pt-[8px] group-hover:text-c_blue">/in/darren-halpin</p>
                   </div>
                 </Link>
               </li>
               <li className="w-[100%] h-[50px] pb-[10px] cursor-pointer group">
                 <Link href="https://github.com/DH-GitRepos/" target="_blank" rel="noopener noreferrer">
-                  <div className="w-[100%] h-[40px] bg-[url('/images/GH-Logo-grey.png')] hover:bg-[url('/images/GH-Logo-blue.png')] bg-contain bg-no-repeat">
+                  <div className="w-[100%] h-[40px] bg-[url('/images/social_icons/GH-Logo-LG.png')] hover:bg-[url('/images/social_icons/GH-Logo-B.png')] bg-contain bg-no-repeat">
                     <p className="w-[100%] pl-[50px] pt-[8px] group-hover:text-c_blue">/DH-GitRepos</p>
                   </div>
                 </Link>

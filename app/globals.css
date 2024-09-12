@@ -116,6 +116,11 @@
   h5 {
     font-family: var(--fXbold);
   }
+
+  .headingOverride {
+    font-family: var(--fXbold) !important;
+    text-decoration: none !important;
+  }
   
   strong,
   th {
@@ -261,7 +266,7 @@
   .textContent3 a:hover {
     text-decoration: underline;
     text-underline-offset: 4px;
-    color: var(--txt_black) !important;
+    color: var(--txt_deepGrey) !important;
   }
 
   .imageContent,

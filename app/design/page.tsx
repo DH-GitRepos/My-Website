@@ -58,7 +58,7 @@ export default function DesignPage() {
             <CallToAction heading="My Qualifications" 
                         mainText="Take a more detailed look at my qualifications." 
                         buttonText="Take a look!"
-                        buttonLink="qualifications" />
+                        buttonLink="education" />
 
             <article className="mainContentItem2 sectionTop">
                 <div className="textContent">
@@ -114,10 +114,10 @@ export default function DesignPage() {
                 <PortfolioGallery />
             </article>
 
-            <CallToAction heading="My Qualifications" 
-                        mainText="Take a more detailed look at my qualifications." 
+            <CallToAction heading="My Software Skills" 
+                        mainText="Take a more detailed look at my software development skills." 
                         buttonText="Take a look!"
-                        buttonLink="qualifications" />
+                        buttonLink="development-skills" />
 
             <article className="mainContentItem2 sectionTop sectionBottom">                
                 <div className="textContent">

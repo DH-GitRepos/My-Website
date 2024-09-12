@@ -53,7 +53,7 @@ export default function HomePage() {
         <CallToAction heading="Software Development Skills" 
                       mainText="Take a deep dive into my software development skills." 
                       buttonText="Take a look!" 
-                      buttonLink="development" />
+                      buttonLink="development-skills" />
 
         <article className="mainContentItem sectionTop sectionBottom">
           <div className="textContent2">

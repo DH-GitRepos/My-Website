@@ -141,7 +141,7 @@ export default function EducationPage() {
         <CallToAction heading="Software Projects" 
                       mainText="Take a more detailed look at my software development projects." 
                       buttonText="Check it out!" 
-                      buttonLink="development-skills" />
+                      buttonLink="development-projects" />
 
         <article id="degreeContainer" className="mainContentItem2 sectionTop sectionBottom">
           <div className="textContent">

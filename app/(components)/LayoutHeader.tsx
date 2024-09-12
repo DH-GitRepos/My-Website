@@ -11,8 +11,8 @@ export default function LayoutHeader() {
         <article id="headerPageTopLogo" className="grow-0">
           <Link href="/">
             <picture id="header-logo" className="h-[60px] py-[10px] pl-[15px]">
-              <source media="(max-height: 45px)" srcSet="/images/Logo-v3b.svg" type="image/svg+xml" />
-              <img src="/images/Logo-v3b.png" alt="Site Logo" className="h-[40px]" />
+              <source media="(max-height: 45px)" srcSet="/images/Logo-D.webp" type="image/webp" />
+              <img src="/images/Logo-D.png" alt="Site Logo" className="h-[40px]" />
             </picture>
           </Link>
         </article>
