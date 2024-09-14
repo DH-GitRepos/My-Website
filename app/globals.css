@@ -294,6 +294,7 @@
   }
 
   .headingOverride {
-    font-family: var(--fXbold) !important;
+    font-family: var(--fBold) !important;
     text-decoration: none !important;
+    font-size: 0.75em !important;
   }

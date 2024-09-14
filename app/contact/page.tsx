@@ -14,7 +14,7 @@ export default function ContactPage() {
       <section id="ContactPageContent">
         
       <article className="sectionTop sectionBottom xs:w-[100%] sm:w-[100%] xs:px-[10px] md:px-[10%] lg:px-[20%]">
-        <div className="textContent bg-c_blue xs:w-[100%] sm:w-[100%] flex flex-col xs:rounded-lg">
+        <div className="textContent box-border bg-c_blue xs:w-[100%] sm:w-[100%] xs:pr-[5px] sm:pr-[5px] flex flex-col xs:rounded-lg">
 
             <div className="basis-2/5 xs:mt-[20px]">
               <picture id="header-logo" className="h-[60px] py-[10px] pl-[15px]">
