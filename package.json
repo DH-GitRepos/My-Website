@@ -10,19 +10,19 @@
   },
   "dependencies": {
     "autoprefixer": "^10.4.20",
-    "dompurify": "^3.1.6",
     "next": "^14.2.8",
     "pocketbase": "^0.21.5",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-transition-group": "^4.4.5"
+    "react-transition-group": "^4.4.5",
+    "sanitize-html": "^2.13.0"
   },
   "devDependencies": {
-    "@types/dompurify": "^3.0.5",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "@types/react-transition-group": "^4.4.11",
+    "@types/sanitize-html": "^2.13.0",
     "postcss": "^8",
     "tailwindcss": "^3.4.1",
     "typescript": "^5"

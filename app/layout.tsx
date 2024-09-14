@@ -26,7 +26,7 @@ export default function RootLayout({
         <link rel="mask-icon" href="/images/favicon/safari-pinned-tab.svg" color="#5bbad5" />
         <title>Darren Halpin | Software Engineer</title>
       </Head>
-      <body className="bg-c_white">
+      <body className="bg-c_white w-[100%] p-0 m-0">
         <LayoutHeader />
         {children}
         <LayoutFooter />

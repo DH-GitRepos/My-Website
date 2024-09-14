@@ -11,6 +11,9 @@ const config: Config = {
     fontFamily: {},
 
     screens: {
+      'xs': '320px',
+      // => @media (min-width: 320px) { ... }
+      
       'sm': '640px',
       // => @media (min-width: 640px) { ... }
 
@@ -51,7 +54,14 @@ const config: Config = {
     extend: {
       backgroundImage: {
         'page-heading-image': "url('/images/globe-static-2560x1440.webp')",
-      }
+      },
+      fontFamily: {
+        'f_Black': ['f_Black', 'sans-serif'],
+        'f_XBold': ['f_XBold', 'sans-serif'],
+        'f_Bold': ['f_Bold', 'sans-serif'],
+        'f_Regular': ['f_Regular', 'sans-serif'],
+        'f_Italic': ['f_Italic', 'sans-serif'],
+      },
     },
   },
 

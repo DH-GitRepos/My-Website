@@ -5,6 +5,8 @@ import ScopedStyles from './page.module.css';
 import PageTitle from '../(components)/PageTitle';
 import CallToAction from '../(components)/CallToAction';
 import LogoGallery from '../(components)/LogoGallery';
+import ContentP from '../(components)/ContentP';
+import ContentH from '../(components)/ContentH';
 
 /**
  * Represents a list of images with their filenames and descriptions.
@@ -63,14 +65,14 @@ export default function DevelopmentSkillsPage() {
       <PageTitle pageTitle="Development Skills" />
       <section id="DevelopmentSkillsPageContent">
         
-        <article className="mainContentItem2 sectionTop sectionBottom">
-          <div className="textContent">
-            <h2>Software development</h2>
-            <p>My journey into software development, specifically web technologies, started in 2001. I learned the basics of web
+        <article className="sectionTop sectionBottom xs:w-[100%] sm:w-[100%] xs:px-[10px] md:px-[10%] lg:px-[20%]">
+          <div className="textContent bg-c_blue xs:w-[100%] sm:w-[100%] flex flex-col xs:rounded-lg">
+            <ContentH level={2} text="Software development" />
+            <ContentP text="My journey into software development, specifically web technologies, started in 2001. I learned the basics of web
               authoring and built up from there with a mix of formal courses and self-directed study. My skillset now is full-stack 
               in nature being capable in front-end and server-side technologies including languages, frameworks and databases. This
-              gives me the capability to produce applications for mobile, desktop and web.</p>
-            <p>Take a look below at my specific techhnology skills.</p>              
+              gives me the capability to produce applications for mobile, desktop and web." /> 
+            <ContentP text="Take a look below at my specific techhnology skills." /> 
           </div>
         </article>
 
@@ -79,23 +81,24 @@ export default function DevelopmentSkillsPage() {
                       buttonText="Take a look!"
                       buttonLink="development-projects" />
 
-        <article className="mainContentItem2 sectionTop sectionBottom">
-          <div className="textContent">
-            <h2>Client-side skills</h2>
-            <div className={`${ScopedStyles.clientSideSkillsContainer} flex flex-row justify-stretch gap-2`}>
+        <article className="sectionTop sectionBottom xs:w-[100%] sm:w-[100%] xs:px-[10px] md:px-[10%] lg:px-[20%]">
+          <div className="textContent bg-c_blue xs:w-[100%] sm:w-[100%] flex flex-col xs:rounded-lg">
+            <ContentH level={2} text="Client-side skills" />
+
+            <div className={`${ScopedStyles.clientSideSkillsContainer} flex xs:px-[10px] xs:pb-[10px] xs:flex-col sm:flex-col md:flex-col justify-stretch gap-4`}>
 
               <div className={`${ScopedStyles.skillsBox} basis-1/3`}>
-                <h3>Languages:</h3>
+                <ContentH level={3} text="Languages:" />
                 <LogoGallery imageList={clientSideLanguages} />
               </div>
 
               <div className={`${ScopedStyles.skillsBox} basis-1/3`}>
-                <h3>Frameworks:</h3>
+                <ContentH level={3} text="Frameworks:" />
                 <LogoGallery imageList={clientSideFrameworks} />
               </div>
 
               <div className={`${ScopedStyles.skillsBox} basis-1/3`}>
-                <h3>Libraries:</h3>
+                <ContentH level={3} text="Libraries:" />
                 <LogoGallery imageList={clientSideLibraries} />
               </div>
               
@@ -109,23 +112,24 @@ export default function DevelopmentSkillsPage() {
                       buttonText="Take a look!"
                       buttonLink="education" /> 
 
-        <article className="mainContentItem2 sectionTop sectionBottom">
-          <div className="textContent">
-            <h2>Server-side skills</h2>
-            <div className={`${ScopedStyles.serverSideSkillsContainer} flex flex-row justify-stretch gap-2`}>
+        <article className="sectionTop sectionBottom xs:w-[100%] sm:w-[100%] xs:px-[10px] md:px-[10%] lg:px-[20%]">
+          <div className="textContent bg-c_blue xs:w-[100%] sm:w-[100%] flex flex-col xs:rounded-lg">
+            <ContentH level={2} text="Server-side skills" />
+
+            <div className={`${ScopedStyles.serverSideSkillsContainer} flex xs:px-[10px] xs:pb-[10px] xs:flex-col sm:flex-col md:flex-col justify-stretch gap-4`}>
             
-            <div className={`${ScopedStyles.skillsBox} basis-1/3`}>
-                <h3>Languages:</h3>
+              <div className={`${ScopedStyles.skillsBox} basis-1/3`}>
+                <ContentH level={3} text="Languages:" />
                 <LogoGallery imageList={serverSideLanguages} />
               </div>
 
               <div className={`${ScopedStyles.skillsBox} basis-1/3`}>
-                <h3>Frameworks:</h3>
+                <ContentH level={3} text="Frameworks:" />
                 <LogoGallery imageList={serverSideFrameworks} />    
               </div>
 
               <div className={`${ScopedStyles.skillsBox} basis-1/3`}>
-                <h3>Databases:</h3>
+                <ContentH level={3} text="Databases:" />
                 <LogoGallery imageList={serverSideDatabases} />
               </div>
 

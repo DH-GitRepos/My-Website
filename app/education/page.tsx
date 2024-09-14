@@ -3,19 +3,29 @@
 
 import { useState, useEffect } from 'react';
 import { CSSTransition } from 'react-transition-group';
-import DOMPurify from 'dompurify';
+import sanitizeHtml from 'sanitize-html';
 import PageTitle from '../(components)/PageTitle';
 import CallToAction from '../(components)/CallToAction';
 import ContentImg from '../(components)/ContentImg';
+import ContentP from '../(components)/ContentP';
+import ContentH from '../(components)/ContentH';
 import ScopedStyles from './page.module.css';
 import educationData from '../(data)/education.json';
 import degreeModuleData from '../(data)/modules.json';
 
-export default function EducationPage() {
+export default function EducationPage() {  
   const [visibleContent, setVisibleContent] = useState<string | null>(null);
   const [scrollToId, setScrollToId] = useState<string | null>(null);
   const [modules, setModules] = useState<any[]>([]);
   const [education, setEducation] = useState<any[]>([]);
+
+  const sanitizeConfig = {
+    allowedTags: ['a', 'b', 'i', 'em', 'strong', 'p', 'div', 'span', 'ul', 'ol', 'li', 'br'],
+    allowedAttributes: {
+      a: ['href', 'target', 'rel'],
+      '*': ['class', 'id', 'style']
+    }
+  };
 
   const showContentItem = (id: string) => {
     const element = document.querySelector(`li[data-id="${id}-main"]`) as HTMLElement | null;
@@ -30,7 +40,7 @@ export default function EducationPage() {
         heading.style.backgroundPosition = 'top left';
         heading.style.backgroundRepeat = 'no-repeat';
         heading.style.backgroundSize = '25px';
-        console.log(`Setting background image to open for ${id}`);
+        // console.log(`Setting background image to open for ${id}`);
       }
     } else {
       if (visibleContent) {
@@ -42,7 +52,7 @@ export default function EducationPage() {
           previousHeading.style.backgroundPosition = 'top left';
           previousHeading.style.backgroundRepeat = 'no-repeat';
           previousHeading.style.backgroundSize = '25px';
-          console.log(`Setting background image to open for ${visibleContent}`);
+          // console.log(`Setting background image to open for ${visibleContent}`);
         }
       }
       setVisibleContent(null); // Close any open sections first
@@ -55,19 +65,19 @@ export default function EducationPage() {
           heading.style.backgroundPosition = 'top left';
           heading.style.backgroundRepeat = 'no-repeat';
           heading.style.backgroundSize = '25px';
-          console.log(`Setting background image to close for ${id}`);
+          // console.log(`Setting background image to close for ${id}`);
         }
       }, 600); // Delay to allow the closing animation to complete
     }
-    console.log('Visible content ID:', visibleContent);
+    // console.log('Visible content ID:', visibleContent);
   };
 
   const scrollToElement = (id: string | null) => {
     const element = document.querySelector(`li[data-id="${id}-main"]`);
     if (element) {
-      console.log('Scrolling to ID:', id);
-      console.log('Element:', element);
-      console.log('Element offsetTop:', element.getBoundingClientRect().top + window.scrollY);
+      // console.log('Scrolling to ID:', id);
+      // console.log('Element:', element);
+      // console.log('Element offsetTop:', element.getBoundingClientRect().top + window.scrollY);
       const elementPosition = element.getBoundingClientRect().top + window.scrollY;
       const offset = 65; // Adjust this value as needed
       const scrollToPosition = elementPosition - offset;
@@ -76,7 +86,7 @@ export default function EducationPage() {
         behavior: 'smooth',
       });
     } else {
-      console.log('Element not found:', id);
+      // console.log('Element not found:', id);
     }
   };
 
@@ -119,23 +129,23 @@ export default function EducationPage() {
       <PageTitle pageTitle="Education Background" />
       <section id="EducationPageContent">
 
-        <article className="mainContentItem sectionTop sectionBottom">
-          <div className="textContent2">
-            <h2>My learning journey</h2>
-            <p>As of July 2024 I finally achieved my BSc (Hons) Computer Science, a lifelong goal which 
+        <article className="sectionTop sectionBottom xs:w-[100%] sm:w-[100%] xs:px-[10px] md:px-[10%] lg:px-[20%]">
+          <div className="textContent bg-c_blue xs:w-[100%] sm:w-[100%] flex flex-col xs:rounded-lg">
+            <ContentH level={2} text="My learning journey" />
+            <ContentImg src="/images/DH-Grad-Headshot" alt="Here's me face with a funny hat on." classes="xl:px-[50px] 2xl:px-[400px]" />
+            <ContentP text="As of July 2024 I finally achieved my BSc (Hons) Computer Science, a lifelong goal which 
               has always been top of my buchet list! My journey through learning over the years has been 
               a varied but mostly technology focused endevour. As an advocate for lifelong learning and 
               development, I have always been keen to learn new things and develop new skills, and my 
               degree has been a fantastic milestone to cap off many topics I first got into as a 
-              technology hobbyist.</p>
-            <p>My journey has taken me through an interesting mix of career focused learning and personal 
+              technology hobbyist." />
+            <ContentP text="My journey has taken me through an interesting mix of career focused learning and personal 
               development, from BASIC programming as a child on the ZX Spectrum, to learning about the web 
               and design in the early 2000s which I turned into my first serious career, to my most recent 
-              academic dive into developing my skills as a software engineer.</p>
-            <p>Below I will take you through a more detailed look at my education history, giving insight 
-              into what I have studied, when and why!</p>
+              academic dive into developing my skills as a software engineer." />
+            <ContentP text="Below I will take you through a more detailed look at my education history, giving insight 
+              into what I have studied, when and why!" />
           </div>
-          <ContentImg src="/images/DH-Grad-Headshot" alt="Here's me face with a funny hat on." /> 
         </article>
 
         <CallToAction heading="Software Projects" 
@@ -143,16 +153,17 @@ export default function EducationPage() {
                       buttonText="Check it out!" 
                       buttonLink="development-projects" />
 
-        <article id="degreeContainer" className="mainContentItem2 sectionTop sectionBottom">
-          <div className="textContent">
-            <h2>BSc (Hons) Computer Science</h2>
-            <h3 className="text-[1.5em] mt-[-15px]">Staffordshire University, 2021 - 2024. Grade: 1st Class.</h3>
-            <p>Blurb about learning context here.</p>
-            <h4 className="text-[1.25em] mt-[-15px] mb-[15px]">Modules Studied:</h4>
-            <ul className={`${ScopedStyles.moduleList}`}>
+        <article className="sectionTop sectionBottom xs:w-[100%] sm:w-[100%] xs:px-[10px] md:px-[10%] lg:px-[20%]">
+          <div className="textContent bg-c_blue xs:w-[100%] sm:w-[100%] flex flex-col xs:rounded-lg">
+            <ContentH level={2} text="BSc (Hons) Computer Science" />
+            <ContentH level={3} text="Staffordshire University, 2021 - 2024. Grade: 1st Class." />
+            <ContentP text="Blurb about learning context here." />
+            <ContentH level={4} text="Modules Studied:" />
+
+            <ul className={`${ScopedStyles.moduleList} xs:px-[5px] sm:px-[5px] md:px-[10px]`}>
             {modules.map((module) => (
               <li key={module.module_id} onClick={() => showContentItem(module.module_id)} data-id={`${module.module_id}-main`}>
-                <h5 className={`${ScopedStyles.moduleHeading}`}>{module.module_title}</h5>
+                <ContentH level={5} text={module.module_title} />
                 <CSSTransition
                   in={visibleContent === module.module_id}
                   timeout={500}
@@ -163,13 +174,13 @@ export default function EducationPage() {
                     exitActive: ScopedStyles.slide_fade_exit_active,
                   }}
                   unmountOnExit
-                  onEnter={() => console.log(`Entering: ${module.module_id}`)}
-                  onExited={() => console.log(`Exited: ${module.module_id}`)}
+                  // onEnter={() => console.log(`Entering: ${module.module_id}`)}
+                  // onExited={() => console.log(`Exited: ${module.module_id}`)}
                 >
                   {/* this section receives html content from the data source, set as innerHTML and sanitise */}
                   <div className={`${ScopedStyles.moduleContent}`} 
                       data-id={module.module_id} 
-                      dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(module.module_content) }} />
+                      dangerouslySetInnerHTML={{ __html: sanitizeHtml(module.module_content, sanitizeConfig) }} />
                 </CSSTransition>
               </li>
             ))}
@@ -184,11 +195,11 @@ export default function EducationPage() {
 
         {/* First 4 education items */}
         {education.slice(0, 4).map((edu) => (
-          <article key={edu.id} className="mainContentItem2 sectionTop sectionBottom">
-            <div className="textContent">
-              <h2>{edu.edu_title}</h2>
-              <h3 className="text-[1.5em] mt-[-15px]">{edu.edu_establishment}, {edu.edu_date_range}. {edu.edu_result}</h3>
-              <p>{edu.edu_description}</p>
+          <article className="sectionTop sectionBottom xs:w-[100%] sm:w-[100%] xs:px-[10px] md:px-[10%] lg:px-[20%]">
+            <div key={edu.id} className="textContent bg-c_blue xs:w-[100%] sm:w-[100%] flex flex-col xs:rounded-lg">
+              <ContentH level={2} text={edu.edu_title} />
+              <ContentH level={3} text={`${edu.edu_establishment}, ${edu.edu_date_range}. ${edu.edu_result}`} />
+              <ContentP text={edu.edu_description} />
             </div>
           </article>
         ))}
@@ -200,11 +211,11 @@ export default function EducationPage() {
 
         {/* Next 4 education items */}
         {education.slice(4, 8).map((edu) => (
-          <article key={edu.id} className="mainContentItem2 sectionTop sectionBottom">
-            <div className="textContent">
-              <h2>{edu.edu_title}</h2>
-              <h3 className="text-[1.5em] mt-[-15px]">{edu.edu_establishment}, {edu.edu_date_range}. {edu.edu_result}</h3>
-              <p>{edu.edu_description}</p>
+          <article className="sectionTop sectionBottom xs:w-[100%] sm:w-[100%] xs:px-[10px] md:px-[10%] lg:px-[20%]">
+            <div key={edu.id} className="textContent bg-c_blue xs:w-[100%] sm:w-[100%] flex flex-col xs:rounded-lg">
+              <ContentH level={2} text={edu.edu_title} />
+              <ContentH level={3} text={`${edu.edu_establishment}, ${edu.edu_date_range}. ${edu.edu_result}`} />
+              <ContentP text={edu.edu_description} />
             </div>
           </article>
         ))}

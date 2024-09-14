@@ -7,7 +7,7 @@ const PortfolioGallery: React.FC = () => {
 
   return (
     <>
-    <div id={`${ScopedStyles.imageGallery}`} className="textContent">
+    <div id={`${ScopedStyles.imageGallery}`} className="textContent p-[10px]">
         {[
             { imgId: "01", imgNo: "15" },
             { imgId: "02", imgNo: "03" },
