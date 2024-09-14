@@ -28,14 +28,14 @@ export default function ContactPage() {
 
               <ul className="pl-[12px] mt-[40px]">
                 <li className="w-[100%] h-[50px] pb-[10px] cursor-pointer group">
-                  <Link href="https://www.linkedin.com/in/darren-halpin/" target="_blank" rel="noopener noreferrer" className="headingOverride">
+                  <Link href="https://www.linkedin.com/in/darren-halpin/" target="_blank" rel="noopener noreferrer" className="xs:pt-[3px] sm:pt-[3px] !no-underline">
                     <div className="w-[100%] h-[40px] xs:pl-[35px] xs:pt-[3px] bg-[url('/images/social_icons/LI-Logo-DG-I.webp')] hover:bg-[url('/images/social_icons/LI-Logo-DG.webp')] bg-contain bg-no-repeat">
                       <ContentH level={3} text="/in/darren-halpin" />
                     </div>
                   </Link>
                 </li>
                 <li className="w-[100%] h-[50px] pb-[10px] cursor-pointer group">
-                  <Link href="https://github.com/DH-GitRepos/" target="_blank" rel="noopener noreferrer" className="headingOverride">
+                  <Link href="https://github.com/DH-GitRepos/" target="_blank" rel="noopener noreferrer" className="xs:pt-[3px] sm:pt-[3px] !no-underline">
                     <div className="w-[100%] h-[40px] xs:pl-[35px] xs:pt-[3px] bg-[url('/images/social_icons/GH-Logo-DG-I.webp')] hover:bg-[url('/images/social_icons/GH-Logo-DG.webp')] bg-contain bg-no-repeat">
                       <ContentH level={3} text="/DH-GitRepos" />
                     </div>
