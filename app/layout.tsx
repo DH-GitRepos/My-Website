@@ -25,7 +25,7 @@ export default function RootLayout({
         <meta property="og:url" content="https://darren-halpin.web.app/" />
         <meta property="og:title" content="Darren Halpin | Software Engineer" />
         <meta property="og:description" content="I am a software engineer with a BSc (Hons) in Computer Science. This resume site details my skills and background." />
-        <meta property="og:image" content="https://darren-halpin.web.app/images/social_cards/SociaCard.png" />
+        <meta property="og:image" content="https://darren-halpin.web.app/images/social_cards/SocialCard.png" />
         {/* <!-- Icon data --> */}
         <meta name="msapplication-config" content="/images/favicon/browserconfig.xml" />
         <link rel="icon" type="image/x-icon" href="/images/favicon/favicon.ico" />
